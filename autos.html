@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+
+    <style>
+        .luxury-vehicle {
+            padding: 20px; /* Ajusta el valor según sea necesario */
+        }
+
+        .carousel-container {
+            width: 100%;
+            max-width: 800px; /* Ajusta el ancho según sea necesario */
+            margin: 0 auto; /* Centra el contenedor si es necesario */
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto; /* Mantiene la proporción de la imagen sin distorsionarla */
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .carousel-nav.prev {
+            left: 10px;
+        }
+
+        .carousel-nav.next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark py-3">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/minilogo.png" alt="Logo de Nuestros Autos" width="50" height="40">
+                    BAGBAC
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Más
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="login.html">Registro</a></li>
+                                <li><a class="dropdown-item" href="clasificados.html">Clasificados</a></li>
+                                <li><a class="dropdown-item" href="fichas_tecnicas.html">Fichas Técnicas</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="autos.html">Detalles de Autos</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="ms-auto">
+                        <a id="login-button" href="login.html" class="btn btn-primary">Iniciar Sesión</a>
+                        <a id="register-button" href="registro.html" class="btn btn-light">Registrarse</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div id="detalle-auto" class="container mt-5">
+            <!-- El contenido se rellenará dinámicamente aquí -->
+        </div>
+    </main>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        // Obtener el ID del auto de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const autoId = parseInt(urlParams.get('id'));
+
+        // Array con los detalles de cada auto (podrías cargar estos datos desde una fuente externa)
+        const autos = [
+            { id: 1, modelo: "Chevrolette Camaro Zl1", año: 2022, imagen: "img/camaro1hd.jpg", descripcion: "Camaro Zl1, Mod. 2022", precio: "$190,000", motor : "LT4 V8 sobrealimentado de 650 CV", transmision : "SuperMatic 10L90-E", capacidad : "5 plazas", imagenes: [
+                "img/camaro1hd.jpg",
+                "img/camaro2hd.jpg",
+                "img/camaro3hd.jpg",
+                "img/camaro4hd.jpg"
+            ] },
+            { id: 2, modelo: "Chevrolet Corvette Stingray", año: 2022, imagen: "img/corvette2hd.jpg", descripcion: "Corvette Stingray, Mod. 2022", precio: "$195,000", motor : "LT2 V-8 Engine", transmision : "Tremec TR-9080 DCT", capacidad : "5 plazas", imagenes: [
+                "img/corvette2hd.jpg",
+                "img/corvette1HD.jpg",
+                "img/corvette3hd.jpg",
+                "img/corvette4hd.jpg"
+            ] },
+            { id: 3, modelo: "Toyota Hilux", año: 2024, imagen: "img/pngegg (8).png", descripcion: "Toyota Hilux, Mod. 2024", precio: "$26.585", motor: "Motor diésel de cuatro cilindros en línea de 2.8 litros", transmision: "Transmisión automática de 6 velocidades", capacidad: "5 plazas", imagenes: [
+                "img/pngegg (8).png",
+                "img/Hilux.jpg",
+                "img/hilux2.jpg",
+                "img/hilux3.jpg"
+            ] },
+            { id: 4, modelo: "BMW X6", año: 2023, imagen: "img/pngegg (2).png", descripcion: "BMW X6, Mod. 2023", precio: "$60,000", motor : "Motor diésel de seis cilindros en línea de 3.0 litros BMW TwinPower Turbo", transmision : "Transmisión M con Steptronic", capacidad : "5 plazas", imagenes: [
+                "img/pngegg (2).png",
+                "img/bmw1.jpg",
+                "img/bmw2.jpg",
+                "img/bmw3.jpg"
+            ] }
+        ];
+
+        const autoSeleccionado = autos.find(auto => auto.id === autoId);
+
+        if (autoSeleccionado) {
+            const detalleAutoContainer = document.getElementById('detalle-auto');
+            let imagenesHTML = '';
+
+            autoSeleccionado.imagenes.forEach((imagen, index) => {
+                imagenesHTML += 
+                    `<div class="carousel-item ${index === 0 ? 'active' : ''}">
+                        <img src="${imagen}" alt="Imagen del automóvil ${index + 1}">
+                    </div>`;
+            });
+
+            detalleAutoContainer.innerHTML = 
+                `<div class="luxury-vehicle">
+                    <p>¡Este vehículo de lujo combina elegancia y potencia en un diseño sofisticado que no pasará desapercibido. A continuación, te presentamos sus características más destacadas!</p>
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-inner">
+                            ${imagenesHTML}
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            <h5 class="card-title">${autoSeleccionado.modelo}, Mod. ${autoSeleccionado.año}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">${autoSeleccionado.descripcion}</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>Modelo:</strong> ${autoSeleccionado.modelo}</li>
+                                <li class="list-group-item"><strong>Año:</strong> ${autoSeleccionado.año}</li>
+                                <li class="list-group-item"><strong>Precio:</strong> <a class="btn btn-info btn-sm" href="#">${autoSeleccionado.precio}</a></li>
+                                <li class="list-group-item"><strong>Motor:</strong> ${autoSeleccionado.motor}</li>
+                                <li class="list-group-item"><strong>Transmisión:</strong> ${autoSeleccionado.transmision}</li>
+                                <li class="list-group-item"><strong>Capacidad:</strong> ${autoSeleccionado.capacidad}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>`;
+        }
+    </script>
+</body>
+</html>

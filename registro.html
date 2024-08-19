@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+    </head>
+<body>
+    <header class="bg-dark py-3">
+        <div class="container">              
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/minilogo.png" alt="Logo de Nuestros Autos" width="50" height="40">
+                    BAGBAC
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Más
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="login.html">Registro</a></li>
+                                <li><a class="dropdown-item" href="clasificados.html">Clasificados</a></li>
+                                <li><a class="dropdown-item" href="fichas_tecnicas.html">Fichas Técnicas</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="autos.html">Detalles de Autos</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="ms-auto">
+                        <a id="login-button" href="login.html" class="btn btn-primary">Iniciar Sesión</a>
+                        <a id="register-button" href="registro.html" class="btn btn-light">Registrarse</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="container my-5">
+        <h1 class="mb-4">Registro de Usuario</h1>
+        <form id="formularioRegistro" class="border p-4 rounded">
+            <div class="mb-3">
+                <label for="regUsuario" class="form-label">Nombre de Usuario</label>
+                <input id="regUsuario" class="form-control" type="text" placeholder="Ingrese su nombre de usuario" required>
+            </div>
+            <div class="mb-3">
+                <label for="regContrasena" class="form-label">Contraseña</label>
+                <input id="regContrasena" class="form-control" type="password" placeholder="Ingrese su contraseña" required>
+            </div>
+            <div class="mb-3">
+                <label for="regTelefono" class="form-label">Teléfono</label>
+                <input id="regTelefono" class="form-control" type="tel" placeholder="Ingrese su teléfono" required>
+            </div>
+            <div class="mb-3">
+                <label for="regDireccion" class="form-label">Dirección</label>
+                <input id="regDireccion" class="form-control" type="text" placeholder="Ingrese su dirección" required>
+            </div>
+            <div class="mb-3">
+                <label for="tipoDocumento" class="form-label">Tipo de documento</label>
+                <select id="tipoDocumento" class="form-select">
+                    <option>DNI</option>
+                    <option>NIE</option>
+                    <option>TIE</option>
+                    <option>Pasaporte</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="regDNI" class="form-label">Documento</label>
+                <input id="regDNI" class="form-control" type="text" placeholder="Ingrese su Documento" required>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="termsCheckbox">
+                <label class="form-check-label" for="termsCheckbox">
+                    Acepto los <a href="#">términos y condiciones</a>
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+        </form>
+    </section>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
