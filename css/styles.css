@@ -51,3 +51,37 @@ body {
     background-color: #007bff; /* Color de fondo del botón de subir */
     color: #ffffff; /* Color del icono del botón de subir */
 }
+.luxury-vehicle {
+    padding: 20px; /* Ajusta el valor según sea necesario */
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 800px; /* Ajusta el ancho según sea necesario */
+    margin: 0 auto; /* Centra el contenedor si es necesario */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen sin distorsionarla */
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-nav.prev {
+    left: 10px;
+}
+
+.carousel-nav.next {
+    right: 10px;
+}
