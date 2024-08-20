@@ -1,158 +1,184 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <style>
-            .card {
-                margin-bottom: 20px;
-            }
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BAGBAC CARS</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        /* Estilos personalizados para el fondo oscuro y texto blanco */
+        body {
+            background-color: #343a40; /* Color de fondo oscuro */
+            color: #ffffff; /* Color de texto blanco */
+        }
+        .card {
+            background-color: #495057; /* Fondo oscuro para las tarjetas */
+            border-color: #6c757d; /* Color del borde de las tarjetas */
+        }
+        .navbar-dark .navbar-nav .nav-link {
+            color: #ffffff; /* Color de texto de los enlaces del navbar */
+        }
+        .btn-primary {
+            background-color: #007bff; /* Color de fondo de los botones primarios */
+            border-color: #007bff; /* Color del borde de los botones primarios */
+        }
+        .btn-success {
+            background-color: #28a745; /* Color de fondo de los botones de éxito */
+            border-color: #28a745; /* Color del borde de los botones de éxito */
+        }
+        .btn-light {
+            background-color: #f8f9fa; /* Color de fondo de los botones ligeros */
+            color: #343a40; /* Color de texto de los botones ligeros */
+            border-color: #f8f9fa; /* Color del borde de los botones ligeros */
+        }
+        .navbar-dark .navbar-toggler-icon {
+            background-color: #ffffff; /* Color del icono del toggler */
+        }
+        /* Opcional: cambiar el color del botón de subir */
+        #scroll-to-top {
+            background-color: #007bff; /* Color de fondo del botón de subir */
+            color: #ffffff; /* Color del icono del botón de subir */
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark py-3">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="index.html">
+                  <img
+                    src="img/baglogo.png"
+                    alt="Logo de Nuestros Autos"
+                    width="50"
+                    height="40"
+                    class="d-inline-block align-top"
+                  />
+                  <span class="navbar-brand-title">BAGBAC CARS</span>
+                </a>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarNav"
+                  aria-controls="navbarNav"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        id="navbarDropdown"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        Más
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="clasificados.html">Clasificados</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="autos.html">Detalles de Autos</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="clasificados.html">0Km</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="garantias.html">Garantías</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="usados.html">Usados</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="seguros.html">Seguros</a>
+                    </li>
+                  </ul>
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="btn btn-success" href="login.html">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item ml-2">
+                      <a class="btn btn-light" href="registro.html">Registrarse</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
+    </header>
 
-            .card img {
-                object-fit: cover;
-                height: 200px;
-            }
-
-            .navbar-nav .nav-link {
-                margin-right: 10px;
-            }
-
-            .navbar-nav .btn {
-                margin-right: 10px;
-            }
-
-            .navbar-nav .btn:last-child {
-                margin-right: 0;
-            }
-        </style>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>BAGBAC CARS</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/footer.css" />
-        <link rel="stylesheet" href="css/styles.css" />
-    </head>
-    <body>
-        <header class="bg-dark py-3">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-dark">
-                    <a class="navbar-brand" href="index.html">
-                      <img
-                        src="img/baglogo.png"
-                        alt="Logo de Nuestros Autos"
-                        width="50"
-                        height="40"
-                        class="d-inline-block align-top"
-                      />
-                      <span class="navbar-brand-title">BAGBAC CARS</span>
-                    </a>
-                    <button
-                      class="navbar-toggler"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#navbarNav"
-                      aria-controls="navbarNav"
-                      aria-expanded="false"
-                      aria-label="Toggle navigation"
-                    >
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                      <ul class="navbar-nav mr-auto">
-                        <li class="nav-item dropdown">
-                          <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            id="navbarDropdown"
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
-                            Más
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="clasificados.html">Clasificados</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="autos.html">Detalles de Autos</a>
-                          </div>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="clasificados.html">0Km</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="garantias.html">Garantías</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="usados.html">Usados</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="seguros.html">Seguros</a>
-                        </li>
-                      </ul>
-                      <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                          <a class="btn btn-success" href="login.html">Iniciar Sesión</a>
-                        </li>
-                        <li class="nav-item ml-2">
-                          <a class="btn btn-light" href="registro.html">Registrarse</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </nav>
-            </div>
-        </header>
-
-        <main>
-            <div class="container mt-5">
-                <div class="row">
-                    <div class="col-md-6 col-lg-3 mb-4">
-                        <div class="card">
-                            <img src="img/camaro1hd.jpg" class="card-img-top" alt="Chevrolette Camaro Zl1">
-                            <div class="card-body">
-                                <h5 class="card-title">Chevrolette Camaro Zl1</h5>
-                                <p class="card-text">Año: 2022</p>
-                                <p class="card-text">Precio: $190,000</p>
-                                <a href="autos.html?id=1" class="btn btn-primary">Ver Detalles</a>
-                            </div>
+    <main>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card">
+                        <img src="img/camaro1hd.jpg" class="card-img-top" alt="Chevrolet Camaro Zl1">
+                        <div class="card-body">
+                            <h5 class="card-title">Chevrolet Camaro Zl1</h5>
+                            <p class="card-text">Año: 2022</p>
+                            <p class="card-text">Precio: $190,000</p>
+                            <a href="autos.html?id=1" class="btn btn-primary">Ver Detalles</a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3 mb-4">
-                        <div class="card">
-                            <img src="img/corvette2hd.jpg" class="card-img-top" alt="Chevrolet Corvette Stingray">
-                            <div class="card-body">
-                                <h5 class="card-title">Chevrolet Corvette Stingray</h5>
-                                <p class="card-text">Año: 2022</p>
-                                <p class="card-text">Precio: $195,000</p>
-                                <a href="autos.html?id=2" class="btn btn-primary">Ver Detalles</a>
-                            </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card">
+                        <img src="img/corvette2hd.jpg" class="card-img-top" alt="Chevrolet Corvette Stingray">
+                        <div class="card-body">
+                            <h5 class="card-title">Chevrolet Corvette</h5>
+                            <p class="card-text">Año: 2023</p>
+                            <p class="card-text">Precio: $195,000</p>
+                            <a href="autos.html?id=2" class="btn btn-primary">Ver Detalles</a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3 mb-4">
-                        <div class="card">
-                            <img src="img/pngegg (8).png" class="card-img-top" alt="Toyota Hilux">
-                            <div class="card-body">
-                                <h5 class="card-title">Toyota Hilux</h5>
-                                <p class="card-text">Año: 2024</p>
-                                <p class="card-text">Precio: $26,585</p>
-                                <a href="autos.html?id=3" class="btn btn-primary">Ver Detalles</a>
-                            </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card">
+                        <img src="img/pngegg (8).png" class="card-img-top" alt="Toyota Hilux">
+                        <div class="card-body">
+                            <h5 class="card-title">Toyota Hilux</h5>
+                            <p class="card-text">Año: 2024</p>
+                            <p class="card-text">Precio: $26,585</p>
+                            <a href="autos.html?id=3" class="btn btn-primary">Ver Detalles</a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3 mb-4">
-                        <div class="card">
-                            <img src="img/pngegg (2).png" class="card-img-top" alt="BMW X6">
-                            <div class="card-body">
-                                <h5 class="card-title">BMW X6</h5>
-                                <p class="card-text">Año: 2023</p>
-                                <p class="card-text">Precio: $60,000</p>
-                                <a href="autos.html?id=4" class="btn btn-primary">Ver Detalles</a>
-                            </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card">
+                        <img src="img/pngegg (2).png" class="card-img-top" alt="BMW X6">
+                        <div class="card-body">
+                            <h5 class="card-title">BMW X6</h5>
+                            <p class="card-text">Año: 2023</p>
+                            <p class="card-text">Precio: $60,000</p>
+                            <a href="autos.html?id=4" class="btn btn-primary">Ver Detalles</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <script src="js/bootstrap.min.js"></script>
-    </body>
+    <div id="footer-container"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/footer.js"></script>
+
+    <a href="#" id="scroll-to-top" class="btn btn-primary rounded-circle" title="Subir" aria-label="Subir">
+      <span class="icon">
+          <i class="fas fa-chevron-up"></i>
+      </span>
+    </a>
+</body>
 </html>

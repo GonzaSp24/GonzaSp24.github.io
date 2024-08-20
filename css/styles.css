@@ -1,0 +1,20 @@
+.card {
+    margin-bottom: 20px;
+}
+
+.card img {
+    object-fit: cover;
+    height: 200px;
+}
+
+.navbar-nav .nav-link {
+    margin-right: 10px;
+}
+
+.navbar-nav .btn {
+    margin-right: 10px;
+}
+
+.navbar-nav .btn:last-child {
+    margin-right: 0;
+}
