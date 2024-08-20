@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body class="bg-dark text-light"> <!-- Aplica fondo oscuro y texto blanco a todo el cuerpo -->
     <!-- Encabezado -->
-    <header class="bg-dark py-3">
+    <header class="bg-secondary py-3"> <!-- Fondo oscuro para el encabezado -->
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <a class="navbar-brand" href="index.html">
@@ -26,9 +26,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Más
-                            </a>
+                            
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="clasificados.html">Clasificados</a>
                                 <div class="dropdown-divider"></div>
@@ -74,7 +72,7 @@
                         <p>Exclusiones: Desgaste normal de las partes, daños por accidentes, modificaciones no autorizadas, entre otras condiciones específicas.</p>
                         <p>Requisitos: Mantenimiento regular según el manual del fabricante, preferiblemente en concesionarios autorizados.</p>
                     </div>
-                    <button class="btn btn-sm btn-info mt-2" onclick="toggleInfo(this)">Ver Más</button>
+                    <button class="btn btn-info mt-2" onclick="toggleInfo(this)">Ver Más</button>
                 </div>
             </div>
 
@@ -87,7 +85,7 @@
                         <p>Exclusiones: Daños causados por el conductor, uso inadecuado del vehículo, entre otros.</p>
                         <p>Requisitos: Uso del vehículo conforme a las instrucciones del fabricante, mantenimiento regular según las recomendaciones del fabricante.</p>
                     </div>
-                    <button class="btn btn-sm btn-info mt-2" onclick="toggleInfo(this)">Ver Más</button>
+                    <button class="btn btn-info mt-2" onclick="toggleInfo(this)">Ver Más</button>
                 </div>
             </div>
 
@@ -100,7 +98,7 @@
                         <p>Exclusiones: Reparaciones no relacionadas con el mantenimiento preventivo, daños por accidentes, entre otros.</p>
                         <p>Requisitos: El vehículo debe ser presentado en concesionarios autorizados para realizar el mantenimiento según el calendario establecido por el fabricante.</p>
                     </div>
-                    <button class="btn btn-sm btn-info mt-2" onclick="toggleInfo(this)">Ver Más</button>
+                    <button class="btn btn-info mt-2" onclick="toggleInfo(this)">Ver Más</button>
                 </div>
             </div>
         </div>
@@ -116,19 +114,19 @@
                     <form>
                         <div class="mb-3">
                             <label class="form-label">Marca del Auto</label>
-                            <input type="text" class="form-control" placeholder="Ejemplo: Toyota" />
+                            <input type="text" class="form-control bg-secondary text-light" placeholder="Ejemplo: Toyota" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Modelo del Auto</label>
-                            <input type="text" class="form-control" placeholder="Ejemplo: Corolla" />
+                            <input type="text" class="form-control bg-secondary text-light" placeholder="Ejemplo: Corolla" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Año del Auto</label>
-                            <input type="number" class="form-control" placeholder="Ejemplo: 2020" />
+                            <input type="number" class="form-control bg-secondary text-light" placeholder="Ejemplo: 2020" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Garantía Elegida</label>
-                            <select class="form-select">
+                            <select class="form-select bg-secondary text-light">
                                 <option value="">Seleccione una garantía</option>
                                 <option value="fabrica-garantizada">Garantía de Fábrica Garantizada</option>
                                 <option value="servicio-posventa">Garantía de Servicio Posventa</option>
@@ -145,21 +143,23 @@
         </div>
     </section>
 
+    <div id="footer-container"></div>
+
     <!-- Referencia a archivos JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/garantias.js"></script>
+    <script src="js/footer.js"></script>
     <script src="js/main.js"></script>
 
-    <!-- Contenedor para el pie de página -->
-    <div id="footer-container"></div>
-
-    <!-- Botón de subir -->
     <a href="#" id="scroll-to-top" class="btn btn-primary rounded-circle" title="Subir" aria-label="Subir">
         <span class="icon">
             <i class="fas fa-chevron-up"></i>
         </span>
     </a>
+    
+    </body>
+    </html>
+    
 </body>
 </html>
