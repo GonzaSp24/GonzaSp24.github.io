@@ -1,0 +1,78 @@
+/* Estilos base para el cuerpo */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+    margin: 0;
+}
+
+/* Estilos para el contenido principal */
+main {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    padding: 20px; /* Espacio alrededor del contenido principal */
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #343a40; /* Color de fondo oscuro para el footer */
+    color: white; /* Color del texto en blanco */
+    text-align: center; /* Centra el texto horizontalmente */
+    padding: 20px; /* Padding en todo el footer */
+    flex-shrink: 0; /* Evita que el footer se encoja */
+    display: flex; /* Utiliza Flexbox para alinear el contenido */
+    flex-direction: column; /* Alinea los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total del footer */
+}
+
+/* Estilos para la lista dentro del footer */
+footer ul {
+    list-style: none; /* Elimina los puntos de lista */
+    padding: 0;
+    margin-top: 10px; /* Espacio superior entre la lista y el contenido del footer */
+    display: flex; /* Utiliza Flexbox para alinear los elementos de la lista */
+    justify-content: center; /* Centra los elementos de la lista horizontalmente */
+}
+
+/* Estilos para cada elemento de la lista */
+footer ul li {
+    margin: 0 10px; /* Espacio entre los elementos de la lista */
+}
+
+/* Estilos para los enlaces dentro del footer */
+footer a {
+    color: white; /* Color del texto de los enlaces */
+    text-decoration: none; /* Elimina el subrayado por defecto */
+}
+
+/* Estilos para los enlaces cuando están en estado de hover */
+footer a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+/* Media query para ajustes responsive */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 15px; /* Ajusta el padding para dispositivos móviles */
+    }
+    footer ul li {
+        margin: 0 5px; /* Ajusta el margen entre los elementos de la lista para móviles */
+    }
+}
+
+/* Estilo para el contenedor del mapa en el footer */
+.map-container {
+    position: relative; /* Posiciona el contenedor en relación con su contenedor padre */
+    width: 100%; /* Ancho completo del contenedor padre */
+    max-width: calc(100% - 4cm); /* Ajusta el ancho máximo para respetar los márgenes */
+    margin: 2cm auto; /* Márgenes de 2 cm y centrado automático horizontal */
+    box-sizing: border-box; /* Incluye padding y márgenes en el tamaño total del contenedor */
+}
+
+/* Estilo para el mapa */
+.map-container iframe {
+    width: 100%; /* Ancho completo del contenedor */
+    height: 400px; /* Altura fija para el mapa, ajustable según necesidad */
+    border: 0; /* Elimina el borde del iframe */
+}
