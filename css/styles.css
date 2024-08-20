@@ -85,3 +85,30 @@ body {
 .carousel-nav.next {
     right: 10px;
 }
+.navbar-nav .btn {
+    margin-right: 15px; /* Aumenta la distancia entre los botones */
+}
+body {
+    background-color: #343a40; /* Fondo oscuro para el cuerpo */
+}
+.form-container {
+    max-width: 500px; /* Ajusta el ancho máximo del formulario */
+    margin: 0 auto; /* Centra el contenedor del formulario */
+}
+.form-background {
+    background-color: #f8f9fa; /* Fondo claro para el formulario */
+    padding: 20px;
+    border-radius: 8px;
+}
+.form-title {
+    color: #000000; /* Color del texto del título */
+}
+.form-label {
+    color: #000000; /* Color del texto de las etiquetas */
+}
+.form-control {
+    color: #000000; /* Color del texto en los campos del formulario */
+}
+.form-check-label {
+    color: #000000; /* Color del texto de las casillas de verificación */
+}
