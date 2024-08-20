@@ -112,3 +112,24 @@ body {
 .form-check-label {
     color: #000000; /* Color del texto de las casillas de verificación */
 }
+
+.card-hover-expand {
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover-expand:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-hover-expand img {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-hover-expand:hover img {
+    transform: scale(1.05);
+}
+
