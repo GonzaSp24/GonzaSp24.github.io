@@ -9,11 +9,12 @@ const validarRegistro = (usuario, contrasena, telefono, direccion, dni) => {
     }
 
     // Validación de la contraseña
-    const contrasenaRegex = /^(?=.*[A-Za-z])(?=.*\d){9,}$/;
+    const contrasenaRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{9,}$/;
     if (!contrasenaRegex.test(contrasena)) {
         alert('La contraseña debe tener al menos 9 caracteres, incluyendo letras y números.');
         return false;
     }
+
 
     // Validación del teléfono (solo números)
     const telefonoRegex = /^\d+$/;
@@ -45,7 +46,7 @@ function generarId() {
     return id;
 }
 
-// Event listener para el formulario de registro
+
 // Event listener para el formulario de registro
 document.getElementById('formularioRegistro').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -74,7 +75,7 @@ document.getElementById('formularioRegistro').addEventListener('submit', functio
 });
 
 
-document.getElementById('formularioInicioSesion').addEventListener('submit', function(event) {
+document.getElementById('formularioInicioSesion').addEventListener('submit', function(event) { //Arreglar JS
     event.preventDefault();
 
     const usuario = document.getElementById('loginUsuario').value;
