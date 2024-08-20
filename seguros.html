@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BAGBAC CARS</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="bg-dark py-3">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="img/baglogo.png"
+              alt="Logo de Nuestros Autos"
+              width="50"
+              height="40"
+            />
+            <h1 class="h4 d-inline align-middle">BAGBAC CARS</h1>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Más
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="clasificados.html">Clasificados</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="autos.html">Detalles de Autos</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  class="btn btn-outline-primary me-2"
+                  href="clasificados.html"
+                  ><strong>0Km</strong></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="btn btn-outline-primary me-2"
+                  href="garantias.html"
+                  ><strong>Garantias</strong></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="btn btn-outline-primary me-2"
+                  href="usados.html"
+                  ><strong>Usados</strong></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="btn btn-outline-primary me-2"
+                  href="seguros.html"
+                  ><strong>Seguros</strong></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-success me-2" href="login.html"
+                  ><strong>Iniciar Sesión</strong></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-light" href="registro.html"
+                  ><strong>Registrarse</strong></a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Encabezado hero para seguros de autos -->
+    <div class="bg-light py-3">
+      <div class="container">
+        <marquee class="h4 text-dark">------ Contamos con los mejores seguros del pais ------ Contamos con los mejores seguros del pais ------</marquee>
+      </div>
+    </div>
+
+    <!-- Sección del carrusel de imágenes -->
+    <section class="section py-5">
+      <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/seguros1.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="img/seguro2.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="img/seguro3.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="img/seguro4.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="img/auto101.jpg" class="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de información sobre seguros -->
+    <section class="section py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <img src="img/responsabilidad.png" class="img-fluid" alt="Responsabilidad civil" />
+            <p>Responsabilidad civil.</p>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <img src="img/incendio2.png" class="img-fluid" alt="Robo y/o hurto e Incendio total y parcial" />
+            <p>Robo y/o hurto e Incendio total y parcial.</p>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <img src="img/puerta.png" class="img-fluid" alt="Cerraduras y cristales, luneta y parabrisas" />
+            <p>Cerraduras y cristales, luneta y parabrisas.</p>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <img src="img/granizo.png" class="img-fluid" alt="Daños por granizo" />
+            <p>Daños por granizo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bonificación y detalles de seguros -->
+    <section class="section py-5">
+      <div class="container">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h2 class="h4">Bonificación 50% de descuento</h2>
+            <p>Obtené un bonificación de hasta un 50% en los primeros 3 meses.</p>
+            <div class="row">
+              <div class="col-lg-4 text-center">
+                <img src="img/lacaja.png" class="img-fluid" alt="La Caja" />
+                <p>La Caja Seguros.</p>
+                <ul class="list-unstyled">
+                  <li>Robo y/o hurto total y parcial.</li>
+                  <li>Incendio total y parcial.</li>
+                  <li>Daño parcial por accidente.</li>
+                </ul>
+              </div>
+              <div class="col-lg-4 text-center">
+                <img src="img/zurich.png" class="img-fluid" alt="Zurich" />
+                <p>Zurich.</p>
+                <ul class="list-unstyled">
+                  <li>Robo y/o hurto total y parcial.</li>
+                  <li>Incendio total y parcial.</li>
+                  <li>Reposición por daño total y parcial.</li>
+                </ul>
+              </div>
+              <div class="col-lg-4 text-center">
+                <img src="img/provincia.png" class="img-fluid" alt="Provincia Seguros" />
+                <p>Provincia Seguros.</p>
+                <ul class="list-unstyled">
+                  <li>Reposición de vehículo.</li>
+                  <li>Robo y/o hurto total y parcial.</li>
+                  <li>Daño parcial por accidente.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container text-center">
+        <p>© 2023 BAGBAC CARS. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
