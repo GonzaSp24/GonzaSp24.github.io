@@ -3,18 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BAGBAC CARS</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
+    <title>Registro - BAGBAC CARS</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-<body>
+<body class="bg-dark text-light">
     <header class="bg-dark py-3">
         <div class="container">              
             <nav class="navbar navbar-expand-lg navbar-dark">
@@ -85,48 +81,64 @@
         </div>
     </header>
     
-    <section class="container my-5">
-        <h1 class="mb-4">Registro de Usuario</h1>
-        <form id="formularioRegistro" class="border p-4 rounded">
-            <div class="mb-3">
-                <label for="regUsuario" class="form-label">Nombre de Usuario</label>
-                <input id="regUsuario" class="form-control" type="text" placeholder="Ingrese su nombre de usuario" required>
-            </div>
-            <div class="mb-3">
-                <label for="regContrasena" class="form-label">Contraseña</label>
-                <input id="regContrasena" class="form-control" type="password" placeholder="Ingrese su contraseña" required>
-            </div>
-            <div class="mb-3">
-                <label for="regTelefono" class="form-label">Teléfono</label>
-                <input id="regTelefono" class="form-control" type="tel" placeholder="Ingrese su teléfono" required>
-            </div>
-            <div class="mb-3">
-                <label for="regDireccion" class="form-label">Dirección</label>
-                <input id="regDireccion" class="form-control" type="text" placeholder="Ingrese su dirección" required>
-            </div>
-            <div class="mb-3">
-                <label for="tipoDocumento" class="form-label">Tipo de documento</label>
-                <select id="tipoDocumento" class="form-select">
-                    <option>DNI</option>
-                    <option>NIE</option>
-                    <option>TIE</option>
-                    <option>Pasaporte</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="regDNI" class="form-label">Documento</label>
-                <input id="regDNI" class="form-control" type="text" placeholder="Ingrese su Documento" required>
-            </div>
-            <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" id="termsCheckbox">
-                <label class="form-check-label" for="termsCheckbox">
-                    Acepto los <a href="#">términos y condiciones</a>
-                </label>
-            </div>
-            <button type="submit" class="btn btn-primary">Registrarse</button>
-        </form>
+    <section class="my-5">
+        <div class="container form-container">
+            <form id="formularioRegistro" class="form-background">
+                <h1 class="form-title mb-4">Registro de Usuario</h1>
+                <div class="mb-3">
+                    <label for="regUsuario" class="form-label">Nombre de Usuario</label>
+                    <input id="regUsuario" class="form-control" type="text" placeholder="Ingrese su nombre de usuario" required>
+                </div>
+                <div class="mb-3">
+                    <label for="regContrasena" class="form-label">Contraseña</label>
+                    <input id="regContrasena" class="form-control" type="password" placeholder="Ingrese su contraseña" required>
+                </div>
+                <div class="mb-3">
+                    <label for="regTelefono" class="form-label">Teléfono</label>
+                    <input id="regTelefono" class="form-control" type="tel" placeholder="Ingrese su teléfono" required>
+                </div>
+                <div class="mb-3">
+                    <label for="regDireccion" class="form-label">Dirección</label>
+                    <input id="regDireccion" class="form-control" type="text" placeholder="Ingrese su dirección" required>
+                </div>
+                <div class="mb-3">
+                    <label for="tipoDocumento" class="form-label">Tipo de documento</label>
+                    <select id="tipoDocumento" class="form-control">
+                        <option>DNI</option>
+                        <option>NIE</option>
+                        <option>TIE</option>
+                        <option>Pasaporte</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="regDNI" class="form-label">Documento</label>
+                    <input id="regDNI" class="form-control" type="text" placeholder="Ingrese su Documento" required>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="termsCheckbox">
+                    <label class="form-check-label" for="termsCheckbox">
+                        Acepto los <a href="#">términos y condiciones</a>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+            </form>
+        </div>
     </section>
-    <script src="js/bootstrap.min.js"></script>
+
+    <div id="footer-container"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/main.js"></script>
+<script src="js/footer.js"></script>
+
+<a href="#" id="scroll-to-top" class="btn btn-primary rounded-circle" title="Subir" aria-label="Subir">
+  <span class="icon">
+      <i class="fas fa-chevron-up"></i>
+  </span>
+</a>
+
 </body>
 </html>
