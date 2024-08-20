@@ -1,52 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        
-    </head>>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - BAGBAC CARS</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        .navbar-nav .btn {
+            margin-right: 15px; /* Aumenta la distancia entre los botones */
+        }
+        body {
+            background-color: #343a40; /* Fondo oscuro para el cuerpo */
+        }
+        .form-container {
+            max-width: 500px; /* Ajusta el ancho máximo del formulario */
+            margin: 0 auto; /* Centra el contenedor del formulario */
+        }
+        .form-background {
+            background-color: #f8f9fa; /* Fondo claro para el formulario */
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .form-title {
+            color: #000000; /* Color del texto del título */
+        }
+        .form-label {
+            color: #000000; /* Color del texto de las etiquetas */
+        }
+        .form-control {
+            color: #000000; /* Color del texto en los campos del formulario */
+        }
+        .form-check-label {
+            color: #000000; /* Color del texto de las casillas de verificación */
+        }
+    </style>
 </head>
-<body class="d-flex align-items-center justify-content-center vh-100 bg-dark text-white">
-    <section class="container">
-        <header class="mb-4">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<body class="bg-dark text-light">
+    <header class="bg-dark py-3">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
                 <a class="navbar-brand" href="index.html">
-                    <img src="img/minilogo.png" alt="Logo de Nuestros Autos" width="50" height="40">
-                    BAGBAC
+                  <img
+                    src="img/baglogo.png"
+                    alt="Logo de Nuestros Autos"
+                    width="50"
+                    height="40"
+                    class="d-inline-block align-top"
+                  />
+                  <span class="navbar-brand-title">BAGBAC CARS</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarNav"
+                  aria-controls="navbarNav"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Más
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="login.html">Registro</a></li>
-                                <li><a class="dropdown-item" href="clasificados.html">Clasificados</a></li>
-                                <li><a class="dropdown-item" href="fichas_tecnicas.html">Fichas Técnicas</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="autos.html">Detalles de Autos</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="ms-auto">
-                        <a id="login-button" class="btn btn-primary">Iniciar Sesión</a>
-                        <a id="register-button" href="registro.html" class="btn btn-light">Registrarse</a>
-                    </div>
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        id="navbarDropdown"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        Más
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="clasificados.html">Clasificados</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="autos.html">Detalles de Autos</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="clasificados.html">0Km</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="garantias.html">Garantías</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="usados.html">Usados</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="seguros.html">Seguros</a>
+                    </li>
+                  </ul>
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="btn btn-success" href="login.html">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item ml-2">
+                      <a class="btn btn-light" href="registro.html">Registrarse</a>
+                    </li>
+                  </ul>
                 </div>
-            </nav>
-        </header>
-        <div class="d-flex justify-content-center">
-            <form id="formularioInicioSesion" class="border p-4 rounded bg-light" style="max-width: 600px; width: 100%;">
-                <h1 class="mb-4">Ingresar</h1>
+              </nav>
+        </div>
+    </header>
+
+    <section class="my-5">
+        <div class="container form-container">
+            <form id="formularioInicioSesion" class="form-background">
+                <h1 class="form-title mb-4">Ingresar</h1>
                 <div class="mb-3">
                     <label for="loginUsuario" class="form-label">Nombre de Usuario</label>
                     <input id="loginUsuario" class="form-control" type="text" placeholder="Ingrese su nombre de Usuario" required>
@@ -66,6 +133,8 @@
         </div>
     </section>
 
-    <script src="js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
